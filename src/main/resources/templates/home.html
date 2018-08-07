@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" th:object="${homeObj}">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Hello, World</h1>
+	<h1 th:text="*{appName}"></h1>
+	<h4 th:text="'Version : '+*{appVersion}"></h4>
+	<h4 th:text="'Modified Date : '+*{appModifiedDate}"></h4>
 </body>
 </html>
