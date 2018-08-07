@@ -1,24 +1,24 @@
 package com.n8ify.genpass.model;
 
 public class Genpass {
-	private int id;
+	private String id;
 	private String pass;
 	private int flag;
 
 	
 	
-	public Genpass(int id, String pass, int flag) {
+	public Genpass(String id, String pass, int flag) {
 		super();
 		this.id = id;
 		this.pass = pass;
 		this.flag = flag;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
