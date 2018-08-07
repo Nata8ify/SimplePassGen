@@ -65,7 +65,7 @@ public class GenerateServiceImpl implements com.n8ify.genpass.service.GenerateSe
 			builder.append(String.valueOf(randomCharacter));
 		}
 		String genpass = builder.toString();
-		String psuedoPassId = String.valueOf(genpass.hashCode()).concat(String.valueOf(System.currentTimeMillis()%100));
+		String psuedoPassId = String.valueOf(Math.abs(genpass.hashCode())).concat(String.valueOf(System.currentTimeMillis()%100));
 		return new Genpass(psuedoPassId, genpass, flag);
 	}
 }
